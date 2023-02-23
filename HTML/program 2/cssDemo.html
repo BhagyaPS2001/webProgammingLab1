@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSS Demo</title>
+		<!--Internal style sheet-->
+		<style>
+			h1{
+				color:gray;
+				margin-left:30px;
+			}
+			table,th,td{
+				border: 1px solid black;
+				background-color: green;
+				text-left: right;
+				margin-left: 40px;
+				padding: 35px;
+				spacing: 35px;
+			}	
+		</style>
+
+		<!--Linking external style sheet-->
+		<link rel="stylesheet" type="text/css" href="MyStyle.css">
+	</head>
+	<body>
+		<h2><center>STYLE SHEETS:How do they work</center></h2>
+		<br><br>
+		<h3 style="color: blue; text-align: center;">Side heading with Inline style </h3>
+		<p style="color: white; border: 2px solid black; background-color: blue; font-size: 20px;"><em>This is a paragraph which uses inline style 
+		in its tag opening element.In the opening tag, inline style can be applied to that specific element. An inline style may be used to apply a 		unique style for a single element. 
+		<br> 
+		To use inline styles, add the style attribute to the relevant element. The style attribute can contain any css property.</em></p>
+		<p>The style of this paragraph is not affected.</p>
+		<center>
+			<table>
+				<tr>
+					<th>Name</th>
+					<th>Salary</th>
+				</tr>
+				<tr>
+					<td>Ramesh Raman</td>
+					<td>5000</td>
+				</tr>
+				<tr>
+					<td>Sam</td>
+					<td>6000</td>
+				</tr>
+				<tr>
+					<td>Jeeva</td>
+					<td>8000</td>
+				</tr>
+			</table>
+		</center>
+	</body>
+</html>
+
+	

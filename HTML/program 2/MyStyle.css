@@ -1,0 +1,21 @@
+h1{
+	color; maroon;
+	margin-leeft: 50px;
+	font-family: calibri;
+}
+body{
+	background-color: linen;
+}
+.para{
+	color: slateblue;
+	margin-left: 50px;
+	font-family: verdana;
+}
+table,th,td{
+	border: 2px solid brown;
+	background-color: pink;
+	text-align: left;
+	margin-left: 40px;
+	padding: 20px;
+	spacing: 60px;
+}

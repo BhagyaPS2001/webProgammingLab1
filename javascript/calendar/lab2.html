@@ -1,0 +1,108 @@
+<html>
+
+<head>
+  <title>Calendar</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+ </head>
+ <style type="text/css">
+   table{
+    border-collapse:collapse;
+
+   }
+   td,th{
+    border:1px solid black;
+    padding: 4px;
+    text-align: center;
+   }
+   th{
+    font-weight: bold;
+    background-color: #E6E6E6;
+   }
+ </style>
+
+<body><center>
+  <h2>Calendar</h2>
+  <div class="cal" id="calendar">
+    
+  </div>
+
+  <script>
+    const y = parseInt(prompt('Enter the year '));
+    const m= parseInt(prompt('Enter the month in number  '));
+    display(y,m);
+    function display(y,m)
+    {
+      if (m==1)
+        document.write("Year: "+y+" Month: January")
+      else if (m==2)
+        document.write("Year: "+y+" Month: February")
+      else if (m==3)
+        document.write("Year: "+y+" Month: March")
+      else if (m==4)
+        document.write("Year: "+y+" Month: April")
+      else if (m==5)
+        document.write("Year: "+y+" Month: May")
+      else if (m==6)
+        document.write("Year: "+y+" Month: June")
+      else if (m==7)
+        document.write("Year: "+y+" Month: July")
+      else if (m==8)
+        document.write("Year: "+y+" Month: August")
+      else if (m==9)
+        document.write("Year: "+y+" Month: September")
+      else if (m==10)
+        document.write("Year: "+y+" Month: October")
+      else if (m==11)
+        document.write("Year: "+y+" Month: November")
+      else if (m==12)
+        document.write("Year: "+y+" Month: December")
+    }
+    
+    
+    function createCalendar(elem, year, month) {
+     
+     
+      let mon = month - 1; 
+      let d = new Date(year, mon);
+
+      let table = '<table><tr><th>MON</th><th>TUE</th><th>WED</th><th>THU</th><th>FRI</th><th>SAT</th><th>SUN</th></tr><tr>';
+
+     
+      for (let i = 0; i < getDay(d); i++) {
+        table += '<td></td>';
+      }
+
+      while (d.getMonth() == mon) {
+        table += '<td>' + d.getDate() + '</td>';
+
+        if (getDay(d) % 7 == 6) { 
+          table += '</tr><tr>';
+        }
+
+        d.setDate(d.getDate() + 1);
+      }
+
+      if (getDay(d) != 0) {
+        for (let i = getDay(d); i < 7; i++) {
+          table += '<td></td>';
+        }
+      }
+
+     
+      table += '</tr></table>';
+
+      elem.innerHTML = table;
+    }
+
+    function getDay(date) { 
+      let day = date.getDay();
+      if (day == 0) day = 7; 
+      return day - 1;
+    }
+
+    createCalendar(calendar, y,m);
+
+  </script>
+</center>
+</body>
+</html>

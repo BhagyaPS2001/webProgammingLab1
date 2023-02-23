@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>Display image</title>
+</head>
+<script>
+
+
+	function newImg()
+	{
+		document.getElementById("demo").src="img2.jfif";
+
+	}
+	function oldImg()
+	{
+		document.getElementById("demo").src="img1.png";
+		
+	}
+	function newTxt()
+	{
+		
+		document.getElementById("dm").innerHTML="New image";
+	}
+	function oldTxt()
+	{
+		
+		document.getElementById("dm").innerHTML="Old image";
+	}
+
+</script>
+<body>
+	<center>
+		<div  onmouseover="newImg()"  onmouseout="oldImg()" style="width:120px; height: 70px; border: 1px solid black; padding: 40px; margin-top: 200px;">
+			<img onmouseover="newImg()"  onmouseout="oldImg()" src="img1.png" width="50px" height="50px" id="demo">
+			<h2  onmouseover="newTxt()"  onmouseout="oldTxt()" id="dm" style="size: 10px;">Old image</h2>
+		</div>
+	</center>
+</body>
+</html>

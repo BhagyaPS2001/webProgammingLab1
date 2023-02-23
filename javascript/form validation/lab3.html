@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Validation</title>
+	<script>
+	function validateForm(){
+		let x=document.forms["myform"]["fname"].value;
+		let y=document.forms["myform"]["no"].value;
+		let c=document.forms["myform"]["crs"].value;
+		let p=document.forms["myform"]["pass"].value;
+
+		var mail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+		let  inputText=document.myform.em;
+
+		if(x==""){
+			alert("Name must be filled out");
+			return false;
+		}
+
+		if(isNaN(y) || y.length!=10){
+			alert("Enter a valid phone no");
+			return false;
+		}
+
+
+		if(inputText.value.match(mail))
+		{
+
+		}
+		else{
+			alert("Invalid email address!");
+			 return false;
+		}
+
+		if(c==""){
+			alert("Enter course name!!");
+			return false;
+		}
+
+
+		if(p==""){
+			alert("Password cannot be empty!!!");
+			return false;
+		}
+		else if(p.length<6){
+			alert("Password must be atleast 6 characters long.");
+			return false;
+		}
+
+
+
+}
+
+	</script>
+</head>
+<body><center>
+	<form name="myform" onsubmit="return validateForm()" method="post">
+		<div style="width: 700px; height: 400px; border: solid black 1px;">
+
+				<h3>Student Details</h3>
+				<br>
+
+					<label>Name </label>
+					<input type="text" name="fname"><br><br>
+
+
+
+
+				<label>Phone no</label>
+				<input type="number" name="no"><br><br>
+
+				<label>Mail id</label>
+				<input type="text" name="em"><br><br>
+
+				<label>Course</label>
+				<input type="text" name="crs"><br><br>
+
+				<label> Create Password</label>
+				<input type="password" name="pass"><br><br>
+
+				<input type="submit" value="Submit">
+
+
+		</div>
+
+	</form>
+</center>
+</body>
+</html>
